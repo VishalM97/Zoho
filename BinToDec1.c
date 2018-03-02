@@ -8,7 +8,9 @@ int main()
     while(num>0)
     {
         if(num/2!=(float)num/2)
+        {
             count++;
+        }
         num/=2;
     }
     printf("%d", count);
