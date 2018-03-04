@@ -15,4 +15,4 @@ int main()
         result=result*10+a[abs(i%k-k+1)];
     }
     printf("%lld", result);
-}
+}   
