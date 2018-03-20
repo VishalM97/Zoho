@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int main()
 {
-    int i=0, num, base, n[1000], newnum=0;
+    int i=0, num, base, n[1000];
     scanf("%d %d", &num, &base);
     while(num>0)
     {
@@ -11,7 +11,10 @@ int main()
     }
     for(i--;i>=0;i--)
     {
-        newnum=newnum*10+n[i];
+        if(n[i]<10)
+        {
+            n[i]=n[i]+'0'-'A'+10;
+        }
+        printf("%c", n[i]+'A'-10);
     }
-    printf("%d", newnum);
 }
