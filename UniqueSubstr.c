@@ -2,17 +2,26 @@
 #include <stdlib.h>
 int isRep(char str[], int i)
 {
+    int r=strlen(str);
     for(;i<strlen(str);i++)
     {
         for(int k=i+1;k<strlen(str);k++)
         {
             if(str[i]==str[k])
             {
-                return k;
+                if(k<r)
+                    r=k;
             }
         }
     }
-    return strlen(str);
+    return r;
+}
+void dispString(char str[], int i, int j)
+{
+    for(;i<j;i++)
+    {
+        printf("%c", str[i]);
+    }
 }
 void uniq(char str[])
 {
@@ -26,10 +35,7 @@ void uniq(char str[])
             max=resj-i;
         }
     }
-    for(;resi<resj;resi++)
-    {
-        printf("%c", str[resi]);
-    }
+    dispString(str, resi, resj);
 }
 int main()
 {
