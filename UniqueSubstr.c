@@ -11,6 +11,7 @@ int isRep(char str[], int i)
             {
                 if(k<r)
                     r=k;
+                break;
             }
         }
     }
